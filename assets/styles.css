@@ -235,8 +235,8 @@ h1{
 }
 .product-badge{
   position:absolute;top:12px;left:12px;
-  background:rgba(13,14,24,.88);color:var(--gold2);
-  border:1px solid rgba(212,149,0,.35);border-radius:4px;
+  background:rgba(124,124,124,.92);color:#fff;
+  border:1px solid rgba(255,255,255,.2);border-radius:4px;
   padding:4px 9px;font-size:10px;font-weight:800;z-index:4;letter-spacing:.04em;
 }
 .card-body{padding:18px 20px 20px}
@@ -272,8 +272,8 @@ h1{
 .image-panel:hover{transform:scale(1.012);box-shadow:0 24px 56px rgba(0,0,0,.18)}
 .years{
   position:absolute;bottom:18px;left:18px;
-  background:rgba(13,14,24,.94);backdrop-filter:blur(14px);
-  border:1px solid rgba(240,171,0,.28);border-radius:12px;padding:14px 18px;
+  background:rgba(124,124,124,.94);backdrop-filter:blur(14px);
+  border:1px solid rgba(240,171,0,.4);border-radius:12px;padding:14px 18px;
 }
 .years strong{display:block;font-size:36px;color:var(--gold2);font-weight:800;line-height:1}
 .years span{color:#8890a8;font-size:11px;margin-top:4px;display:block;text-transform:uppercase;letter-spacing:.06em}
@@ -285,17 +285,17 @@ h1{
   font-weight:900;font-size:10px;flex:0 0 22px;margin-top:3px;
 }
 
-/* ── Stats (dark band) ── */
-.stats-band{background:var(--dark);padding:60px 0;border-top:1px solid var(--dark3);border-bottom:1px solid var(--dark3)}
+/* ── Stats (gray band) ── */
+.stats-band{background:#7C7C7C;padding:60px 0}
 .stats{grid-template-columns:repeat(4,1fr)}
 .stat{
-  padding:28px;border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);
-  background:rgba(255,255,255,.03);text-align:center;
+  padding:28px;border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);
+  background:rgba(255,255,255,.08);text-align:center;
   transition:border-color .25s,background .25s,transform .25s var(--spring);
 }
-.stat:hover{border-color:rgba(240,171,0,.3);background:rgba(240,171,0,.04);transform:translateY(-4px)}
+.stat:hover{border-color:rgba(240,171,0,.5);background:rgba(240,171,0,.12);transform:translateY(-4px)}
 .stat strong{display:block;color:var(--gold2);font-size:40px;font-weight:800;line-height:1;margin-bottom:8px}
-.stat span{color:#7a8298;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.stat span{color:rgba(255,255,255,.8);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
 
 /* ── CTA band ── */
 .cta{
@@ -313,10 +313,10 @@ h1{
 .cta h2{margin:0;font-size:clamp(26px,3.4vw,44px);letter-spacing:-.04em;font-weight:800}
 .cta p{margin:8px 0 0;max-width:540px;color:rgba(0,0,0,.6);font-size:15px}
 .cta .btn{
-  background:var(--dark);color:#fff;white-space:nowrap;border-color:transparent;
+  background:#7C7C7C;color:#fff;white-space:nowrap;border-color:transparent;
   min-width:180px;flex-shrink:0;
 }
-.cta .btn:hover{background:#1c1e2a;transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.cta .btn:hover{background:#666;transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.3)}
 
 /* ── Footer ── */
 .footer{background:var(--dark)}
