@@ -258,6 +258,19 @@ h1{
 }
 .link:hover{gap:10px;color:var(--gold);border-color:var(--gold)}
 
+/* ── Logo grid ── */
+.logo-grid{grid-template-columns:repeat(7,1fr)}
+.logo-card{
+  border:1.5px solid var(--line);border-radius:var(--radius-sm);background:#fff;
+  padding:20px 14px;display:flex;align-items:center;justify-content:center;
+  min-height:90px;
+  transition:border-color .25s,transform .25s var(--spring),box-shadow .25s;
+}
+.logo-card:hover{border-color:var(--gold2);transform:translateY(-4px);box-shadow:0 8px 24px rgba(212,149,0,.15)}
+.logo-card img{max-width:100%;max-height:52px;object-fit:contain;filter:grayscale(30%);transition:filter .25s}
+.logo-card:hover img{filter:grayscale(0%)}
+.logo-card span{font-weight:900;letter-spacing:.08em;font-size:13px;color:#3a4260}
+
 /* ── Brand cards (home) ── */
 .brands{grid-template-columns:repeat(7,1fr)}
 .brand-card{
@@ -280,8 +293,8 @@ h1{
 .image-panel:hover{transform:scale(1.012);box-shadow:0 24px 56px rgba(0,0,0,.18)}
 .years{
   position:absolute;bottom:18px;left:18px;
-  background:rgba(124,124,124,.94);backdrop-filter:blur(14px);
-  border:1px solid rgba(240,171,0,.4);border-radius:12px;padding:14px 18px;
+  background:rgba(10,11,18,.95);backdrop-filter:blur(14px);
+  border:1px solid rgba(240,171,0,.45);border-radius:12px;padding:14px 18px;
 }
 .years strong{display:block;font-size:36px;color:var(--gold2);font-weight:800;line-height:1}
 .years span{color:#8890a8;font-size:11px;margin-top:4px;display:block;text-transform:uppercase;letter-spacing:.06em}
@@ -529,6 +542,7 @@ h1{
   .hero-stats{gap:24px;flex-wrap:wrap}
   .products{grid-template-columns:repeat(2,1fr)}
   .brands{grid-template-columns:repeat(4,1fr)}
+  .logo-grid{grid-template-columns:repeat(4,1fr)}
   .split,.product-page,.contact-grid{grid-template-columns:1fr}
   .detail-visual{position:relative;top:auto;min-height:380px}
   .footer-grid{grid-template-columns:1fr 1fr}
@@ -545,7 +559,7 @@ h1{
   .hero-stats{gap:20px}
   .truststrip .container,.stats{grid-template-columns:1fr}
   .trustitem{border-right:0;border-bottom:1px solid var(--line)}
-  .products,.brands,.about-cards,.brand-grid{grid-template-columns:1fr}
+  .products,.brands,.about-cards,.brand-grid,.logo-grid{grid-template-columns:repeat(3,1fr)}
   .section{padding:64px 0}
   .section-head{align-items:flex-start;flex-direction:column}
   .footer-grid{grid-template-columns:1fr}
