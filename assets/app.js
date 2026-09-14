@@ -17,7 +17,7 @@ const PRODUCTS = [
 
 function card(p) {
   const imgHtml = p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : '';
-  return `<article class="card fade"><div class="product-visual${p.img?' has-image':''}">${imgHtml}<span class="product-badge">${p.brand} · ${p.cat}</span></div><div class="card-body"><h3>${p.name}</h3><p>${p.desc}</p><a class="link" href="product.html?id=${p.id}">View specifications →</a></div></article>`;
+  return `<article class="card fade"><div class="product-visual${p.img?' has-image':''}">${imgHtml}<span class="product-badge">${p.brand} · ${p.cat}</span></div><div class="card-body"><h3>${p.name}</h3><p>${p.desc}</p><a class="link" href="product.html?id=${p.id}">View more →</a></div></article>`;
 }
 
 function renderProducts(targetId = 'productGrid', list = PRODUCTS) {
