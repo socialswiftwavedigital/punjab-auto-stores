@@ -279,6 +279,11 @@ h1{font-size:clamp(44px,6.5vw,86px);line-height:.95;letter-spacing:-.04em;margin
   transition:gap .2s,color .2s,border-color .2s;
 }
 .link:hover{gap:10px;color:var(--accent2);border-color:var(--accent2)}
+.section-head .link{
+  color:var(--text);border:1.5px solid var(--line);border-radius:var(--radius-sm);
+  padding:10px 20px;background:#fff;font-size:13px;font-weight:700;letter-spacing:.01em;
+}
+.section-head .link:hover{border-color:var(--text);color:var(--text);gap:10px;background:#fff}
 
 /* ── Logo grid ── */
 .logo-grid{grid-template-columns:repeat(7,1fr)}
@@ -319,7 +324,7 @@ h1{font-size:clamp(44px,6.5vw,86px);line-height:.95;letter-spacing:-.04em;margin
 .image-panel:hover{transform:scale(1.014);box-shadow:0 28px 64px rgba(11,30,64,.18)}
 .years{
   position:absolute;bottom:18px;left:18px;z-index:2;
-  background:rgba(11,30,64,.95);backdrop-filter:blur(14px);
+  background:#111318;
   border:1px solid rgba(232,93,4,.4);border-radius:12px;padding:14px 18px;
 }
 .years strong{display:block;font-size:36px;color:var(--accent2);font-weight:800;line-height:1}
