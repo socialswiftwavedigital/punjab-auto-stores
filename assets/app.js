@@ -158,6 +158,15 @@ function initForm() {
   });
 }
 
+function toggleSearch() {
+  const drawer = document.getElementById('searchDrawer');
+  const btn = document.getElementById('searchToggle');
+  if (!drawer) return;
+  const open = drawer.classList.toggle('open');
+  btn?.classList.toggle('active', open);
+  if (open) setTimeout(() => document.getElementById('headerSearch')?.focus(), 320);
+}
+
 function goSearch() {
   const val = document.getElementById('headerSearch')?.value?.trim();
   if (val) window.location.href = `shop.html?q=${encodeURIComponent(val)}`;
@@ -165,6 +174,13 @@ function goSearch() {
 }
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter' && document.activeElement?.id === 'headerSearch') goSearch();
+  if (e.key === 'Escape') {
+    const drawer = document.getElementById('searchDrawer');
+    if (drawer?.classList.contains('open')) {
+      drawer.classList.remove('open');
+      document.getElementById('searchToggle')?.classList.remove('active');
+    }
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
