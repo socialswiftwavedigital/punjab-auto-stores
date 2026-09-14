@@ -158,6 +158,51 @@ function initForm() {
   });
 }
 
+function initSlider() {
+  const slider = document.querySelector('.hero-slider');
+  if (!slider) return;
+  const slides = slider.querySelectorAll('.slide');
+  const dots = slider.querySelectorAll('.dot');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function go(n) {
+    slides[current].classList.remove('active');
+    dots[current]?.classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current]?.classList.add('active');
+    const c = slides[current].querySelector('.slide-content');
+    if (c) { c.style.animation = 'none'; c.offsetHeight; c.style.animation = ''; }
+  }
+
+  function next() { go(current + 1); }
+  function prev() { go(current - 1); }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 5500);
+  }
+
+  slider.querySelector('.slider-next')?.addEventListener('click', () => { next(); startTimer(); });
+  slider.querySelector('.slider-prev')?.addEventListener('click', () => { prev(); startTimer(); });
+  dots.forEach((d, i) => d.addEventListener('click', () => { go(i); startTimer(); }));
+
+  let startX = 0;
+  slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); startTimer(); }
+  }, { passive: true });
+
+  slider.addEventListener('mouseenter', () => clearInterval(timer));
+  slider.addEventListener('mouseleave', startTimer);
+
+  startTimer();
+}
+
 function toggleSearch() {
   const drawer = document.getElementById('searchDrawer');
   const btn = document.getElementById('searchToggle');
@@ -191,6 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (si) { si.value = urlQ; si.dispatchEvent(new Event('input')); }
   }
   initNav();
+  initSlider();
   observe();
   initCounters();
   initShop();
