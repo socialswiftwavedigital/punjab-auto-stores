@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
 
 :root{
-  --bg:#f0f1f5;--surface:#f7f8fc;--surface2:#fff;
+  --bg:#eeeeee;--surface:#f5f5f5;--surface2:#fff;
   --text:#111318;--muted:#56607a;
   --accent:#f0ab00;--accent2:#c98a00;--accent3:#ffd060;--accent-dim:rgba(212,149,0,.1);
   --navy:#0d0e18;--navy2:#161824;--navy3:#1e2030;
