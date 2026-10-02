@@ -599,3 +599,12 @@ html,body{overflow-x:clip}
 @media(max-width:380px){
   .products{grid-template-columns:1fr}
 }
+/* Tablets are touch screens too: same 44px targets up to 1024px */
+@media(max-width:1024px){
+  .topbar-social a{width:36px;height:36px;font-size:14px}
+  .footer-social a{width:44px;height:44px;font-size:16px}
+  .footer-links a,.footer-contact-list a,.contact-list a{display:inline-block;padding:8px 0}
+  .crumbs a{padding:12px 2px}
+  .menu a{padding:13px 14px}
+  .hamb,.search-btn{min-width:44px;min-height:44px}
+}
